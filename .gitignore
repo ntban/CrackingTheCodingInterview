@@ -1,0 +1,5 @@
+# igrones #
+bin/
+*.classpath
+*.project
+.settings/
