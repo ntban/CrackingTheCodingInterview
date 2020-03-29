@@ -3,7 +3,6 @@ package TechnicalQuestions;
 import java.io.FileInputStream;
 import java.util.Arrays;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Scanner;
 
 /**
@@ -85,13 +84,13 @@ public class E1PairsKDiff {
 		}
 		for (int i = 0; i < n; i++) {
 			int k1 = a[i] + k;
-			if(hashTable.containsKey(k1)) {
+			if (hashTable.containsKey(k1)) {
 				print(i, hashTable.get(k1));
 			}
 		}
 	}
 
-	public static void main(String[] args) throws Exception{
+	public static void main(String[] args) throws Exception {
 		System.setIn(new FileInputStream("input/e1.in"));
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
@@ -107,12 +106,12 @@ public class E1PairsKDiff {
 		System.out.println("Brute Force Approach");
 		solution.bruteForceApproach();
 		System.out.printf("\nCost %d ms", System.currentTimeMillis() - startTime);
-		
+
 		startTime = System.currentTimeMillis();
 		System.out.println("\nSort Approach");
 		solution.sortApproach();
 		System.out.printf("\nCost %d ms", System.currentTimeMillis() - startTime);
-		
+
 		startTime = System.currentTimeMillis();
 		System.out.println("\nHash Approach");
 		solution.hashApproach();
