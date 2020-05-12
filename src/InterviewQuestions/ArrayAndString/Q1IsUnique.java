@@ -112,7 +112,7 @@ public class IsUnique {
 	void quickSort(char a[], int left, int right) {
 		int i = left, j = right;
 		int pivot = a[(left + right) / 2];
-		// chia dãy thành 2 phần
+		// divide the aray to 2 parts
 		while (i <= j) {
 			while (a[i] < pivot)
 				++i;
@@ -129,7 +129,7 @@ public class IsUnique {
 				--j;
 			}
 		}
-		// Gọi đệ quy để sắp xếp các nửa
+		// recursion 
 		if (left < j)
 			quickSort(a, left, j);
 		if (i < right)
